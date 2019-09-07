@@ -19,6 +19,10 @@ let isValid = (product) => {
         return { isValid: false, propertyInvalid: "model" };
     } else if (!product.manufacturer){
         return { isValid: false, propertyInvalid: "manufacturer" };
+    }else if (!product.purchaseDetails){
+        return { isValid: false, propertyInvalid: "purchaseDetails" };
+    }else if (!product.purchaseDetails.product){
+        return { isValid: false, propertyInvalid: "product" };
     } else{
         return {isValid: true, propertyInvalid: undefined}
     }
@@ -43,7 +47,8 @@ exports.create = (req, res) => {
             lastCost: req.body.lastCost,
             brand: req.body.brand,
             model: req.body.model,
-            manufacturer: req.body.manufacturer
+            manufacturer: req.body.manufacturer,
+            purchaseDetails: req.body.purchaseDetails
         });
         
 
