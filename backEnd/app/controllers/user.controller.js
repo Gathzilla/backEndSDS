@@ -95,8 +95,6 @@ exports.findAll = (req, res) => {
 
 exports.search = (req, res) => {
 
-    console.log(req.body);
-
 
 
     User.findOne({ [req.body.parameter] : req.body.value }, (error, user) => {
@@ -104,13 +102,9 @@ exports.search = (req, res) => {
             let response = { "status": "error", "message": "Some error occurred while login the User", "error": true, "data": error.message || undefined };
             return wrapper.sendResponse({ method: "POST /api/login", response: response, httpCode: 500, res: res });
         } else if (!user) {
-            console.log("Este es el usuario " + user);
-            console.log("Este es el item " + item);
-            
-            console.log("Este es el parametro a buscar " + req.body.parameter);
-            console.log("Este es el codigo a buscar " + req.body.value);
+    
 
-            let response = { "status": "error", "message": "no mames wey", "error": true, "data": undefined };
+            let response = { "status": "error", "message": "Could not find user", "error": true, "data": undefined };
             return wrapper.sendResponse({ method: "GET /api/search", response: response, httpCode: 401, res: res });
         } else {
             
