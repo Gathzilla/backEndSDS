@@ -19,5 +19,5 @@ module.exports = (app) => {
 
     app.get('/api/search', verifyToken, users.search);
 
-
+    
 }

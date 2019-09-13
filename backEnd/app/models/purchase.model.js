@@ -1,6 +1,7 @@
 const User = require('../models/user.model');
 const Product = require('../models/product.model.js');
 const Provider = require('../models/provider.model.js');
+const Article = require('../models/article.model.js');
 const mongoose = require('mongoose');
 
 const PurchaseSchema = mongoose.Schema({
@@ -15,7 +16,7 @@ const PurchaseSchema = mongoose.Schema({
     purchaseDetails: {
 
         product: Product.schema,
-        article: String,
+        article: Article.schema,
         quantity: Number,
         unitCost: Number
 

@@ -78,7 +78,7 @@ exports.findAll = (req, res) => {
         });
 };
 
-//Search by Parameter
+
 exports.findByParameter= (req, res) => {
 
     Provider.findOne({[req.body.parameter] : req.body.value}, (error, provider) => {

@@ -1,6 +1,8 @@
 const User = require('../models/user.model');
 const Product = require('../models/product.model.js');
 const Client = require('../models/client.model.js');
+const Article = require('../models/article.model.js');
+
 const mongoose = require('mongoose');
 
 const SaleSchema = mongoose.Schema({
@@ -15,7 +17,7 @@ const SaleSchema = mongoose.Schema({
     saleDetails: {
 
         product: Product.schema,
-        article: String,
+        article: Article,
         quantity: Number,
         unitCost: Number
 

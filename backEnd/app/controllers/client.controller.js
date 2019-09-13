@@ -77,7 +77,7 @@ exports.findAll = (req, res) => {
         });
 };
 
-//Search by Parameter
+
 exports.findByParameter= (req, res) => {
 
     Client.findOne({[req.body.parameter] : req.body.value}, (error, client) => {
@@ -95,7 +95,7 @@ exports.findByParameter= (req, res) => {
             }
         } 
         )};
-// close the find element
+
 
 exports.findOneClient = (req, res) => {
     Client.findById(req.params.id)

@@ -17,6 +17,8 @@ let isValid = (purchase) => {
         return { isValid: false, propertyInvalid: "user" };
     }else if (!purchase.provider) {
         return { isValid: false, propertyInvalid: "provider" };
+    }else if (!purchase.purchaseDetails) {
+        return { isValid: false, propertyInvalid: "purchaseDetails" };
     }else {
         return { isValid: true, propertyInvalid: undefined }
     }
@@ -43,8 +45,8 @@ exports.create = (req, res) => {
             returnDate: req.body.returnDate,    
             state: "processing",            
             user: req.body.user,
-            provider: req.body.provider
-            
+            provider: req.body.provider,
+            purchase: req.body.purchaseDetails
         });
 
         
@@ -145,51 +147,84 @@ exports.findOne = (req, res) => {
 };
 
 
-exports.update = (req, res) => {
+exports.apply = (req, res) => {
     
     if (!req.body) {
         let response = { "status": "error", "message": "Purchase content can not be empty", "error": true, "data": undefined };
-        return wrapper.sendResponse({ method: "PUT /api/purchase", response: response, httpCode: 400, res: res });
+        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 400, res: res });
     } else {
          
         const purchaseToUpdate = {
-            purchaseNo: req.body.purchaseNo,
-            billNo: req.body.billNo,
-            date: req.body.date,    
-            returnDate: req.body.returnDate,    
-            state: "processing",            
-            user: req.body.user,
-            provider: req.body.provider
+             
+            state: "processed",            
+          
         };
 
-        let validation = isValid(purchaseToUpdate);
-        if (!validation.isValid) {
-            let response = { "status": "error", "message": "Purchase " + validation.propertyInvalid + " is required", "error": true, "data": purchaseToUpdate };
-            return wrapper.sendResponse({ method: "PUT /api/purchase", response: response, httpCode: 400, res: res });
-        } else {
+      
             
             
             
            
-            Purchase.findByIdAndUpdate(req.body.employeeCode, purchaseToUpdate, { new: true, upsert: true })
+            Purchase.findByIdAndUpdate(req.body._id, purchaseToUpdate)
                 .then(purchase => {
                     if (!purchase) {
                         let response = { "status": "error", "message": "Some error ocurred while updating the purchase with id" + req.body.employeeCode, "error": true, "data": undefined };
-                        return wrapper.sendResponse({ method: "PUT /api/purchase", response: response, httpCode: 404, res: res });
+                        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 404, res: res });
                     } else {
                         let response = { "status": "ok", "message": "Purchase updated successfully", "error": false, "data": purchase };
-                        return wrapper.sendResponse({ method: "PUT /api/purchase", response: response, httpCode: 202, res: res });
+                        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 202, res: res });
                     }
                 }).catch(error => {
                     if (error.kind === 'ObjectId') {
                         let response = { "status": "error", "message": "Purchase not found", "error": true, "data": undefined };
-                        return wrapper.sendResponse({ method: "PUT /api/purchase", response: response, httpCode: 404, res: res });
+                        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 404, res: res });
                     } else {
                         let response = { "status": "error", "message": "Some error occurred while updating the purchase", "error": true, "data": error.message || undefined };
-                        return wrapper.sendResponse({ method: "PUT /api/purchase", response: response, httpCode: 500, res: res });
+                        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 500, res: res });
                     }
                 });
-        }
+        
+    }
+};
+
+
+exports.void = (req, res) => {
+    
+    if (!req.body) {
+        let response = { "status": "error", "message": "Purchase content can not be empty", "error": true, "data": undefined };
+        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 400, res: res });
+    } else {
+         
+        const purchaseToUpdate = {
+             
+            state: "cancelled",            
+          
+        };
+
+      
+            
+            
+            
+           
+            Purchase.findByIdAndUpdate(req.body._id, purchaseToUpdate)
+                .then(purchase => {
+                    if (!purchase) {
+                        let response = { "status": "error", "message": "Some error ocurred while updating the purchase with id" + req.body.employeeCode, "error": true, "data": undefined };
+                        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 404, res: res });
+                    } else {
+                        let response = { "status": "ok", "message": "Purchase updated successfully", "error": false, "data": purchase };
+                        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 202, res: res });
+                    }
+                }).catch(error => {
+                    if (error.kind === 'ObjectId') {
+                        let response = { "status": "error", "message": "Purchase not found", "error": true, "data": undefined };
+                        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 404, res: res });
+                    } else {
+                        let response = { "status": "error", "message": "Some error occurred while updating the purchase", "error": true, "data": error.message || undefined };
+                        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 500, res: res });
+                    }
+                });
+        
     }
 };
 

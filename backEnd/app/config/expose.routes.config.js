@@ -4,6 +4,8 @@ const productRoutes = require('../routes/product.routes');
 const providerRoutes = require('../routes/provider.routes');
 const clientRoutes = require('../routes/client.routes');
 const purchasesRoutes = require('../routes/purchases.routes');
+const salesRoutes = require('../routes/sales.routes');
+const articleRoutes = require('../routes/article.routes');
 
 const backend = {
     exposeRoutes: (app) => {
@@ -13,6 +15,8 @@ const backend = {
         providerRoutes(app);
         clientRoutes(app);
         purchasesRoutes(app);
+        salesRoutes(app);
+        articleRoutes(app);
     }
 } 
 

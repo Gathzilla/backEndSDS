@@ -33,7 +33,7 @@ exports.metadata = (req, res) => {
     return wrapper.sendResponse({ method: "GET /api/product/metadata", response: response, httpCode: 200, res: res });
 };
 
-exports.create = (req, res) => {  
+exports.create = (req, res) => {
     if (!req.body) {
         let response = { "status": "error", "message": "Product content can not be empty", "error": true, "data": undefined };
         return wrapper.sendResponse({ method: "POST /api/product", response: response, httpCode: 400, res: res });
@@ -88,7 +88,7 @@ exports.findAll = (req, res) => {
         });
 };
 
-//Search by Parameter
+
 exports.findByParameter= (req, res) => {
 
     Product.findOne({[req.body.parameter] : req.body.value}, (error, product) => {
@@ -106,7 +106,6 @@ exports.findByParameter= (req, res) => {
             }
         } 
         )};
-// close the find element
 
 exports.findOneProduct = (req, res) => {
     Product.findById(req.params.id)

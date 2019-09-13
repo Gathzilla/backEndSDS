@@ -11,7 +11,9 @@ module.exports = (app) => {
 
     app.post('/api/purchase', verifyToken, purchases.create);
 
-    app.put('/api/purchase', verifyToken, purchases.update);
+    app.put('/api/purchase/apply', verifyToken, purchases.apply);
+
+    app.put('/api/purchase/void', verifyToken, purchases.void);
 
     app.delete('/api/purchase/:id', verifyToken, purchases.delete);
 

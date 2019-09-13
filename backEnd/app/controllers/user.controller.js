@@ -148,6 +148,7 @@ exports.update = (req, res) => {
     } else {
          
         const userToUpdate = {
+            
             employeeCode: req.body.employeeCode,
             name: req.body.name,
             lastName: req.body.lastName,    
@@ -167,12 +168,12 @@ exports.update = (req, res) => {
         } else {
             
             
-            newUser.password = bcrypt.hashSync(newUser.password, 8);
+            userToUpdate.password = bcrypt.hashSync(userToUpdate.password, 8);
            
-            User.findByIdAndUpdate(req.body.employeeCode, userToUpdate, { new: true, upsert: true })
+            User.findByIdAndUpdate(req.body._id, userToUpdate)
                 .then(user => {
                     if (!user) {
-                        let response = { "status": "error", "message": "Some error ocurred while updating the user with id" + req.body.employeeCode, "error": true, "data": undefined };
+                        let response = { "status": "error", "message": "Some error ocurred while updating the user with id " + req.body._id, "error": true, "data": undefined };
                         return wrapper.sendResponse({ method: "PUT /api/user", response: response, httpCode: 404, res: res });
                     } else {
                         let response = { "status": "ok", "message": "User updated successfully", "error": false, "data": user };
@@ -185,7 +186,8 @@ exports.update = (req, res) => {
                     } else {
                         let response = { "status": "error", "message": "Some error occurred while updating the user", "error": true, "data": error.message || undefined };
                         return wrapper.sendResponse({ method: "PUT /api/user", response: response, httpCode: 500, res: res });
-                    }
+                    }_id
+
                 });
         }
     }
