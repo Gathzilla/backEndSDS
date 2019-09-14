@@ -8,11 +8,11 @@ const PurchaseSchema = mongoose.Schema({
      
     purchaseNo: Number,
     billNo: Number,
-    date: Date,    
-    provider: Provider.schema, 
+    date: Date,
     returnDate: Date,
     state: String,
-    user: User.schema,
+    user: User.schema,    
+    provider: Provider.schema, 
     purchaseDetails: {
 
         product: Product.schema,
