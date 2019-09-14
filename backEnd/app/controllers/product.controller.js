@@ -19,8 +19,6 @@ let isValid = (product) => {
         return { isValid: false, propertyInvalid: "model" };
     } else if (!product.manufacturer){
         return { isValid: false, propertyInvalid: "manufacturer" };
-    }else if (!product.purchaseDetails){
-        return { isValid: false, propertyInvalid: "purchaseDetails" };
     } else{
         return {isValid: true, propertyInvalid: undefined}
     }
