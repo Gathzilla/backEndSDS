@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const ClientSchema = mongoose.Schema({
-     
+     //doublecheckd with pdf provided by jason. It includes everything. 
     nit: Number,
     name: String,    
-    adress: String,    
+    address: String,    
     telephone: Number,
     email: String,
     contact: String

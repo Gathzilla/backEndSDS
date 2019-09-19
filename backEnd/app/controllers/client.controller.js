@@ -7,8 +7,8 @@ let isValid = (client) => {
         return { isValid: false, propertyInvalid: "nit" };
     }  else if (!client.name){
         return { isValid: false, propertyInvalid: "name" };
-    } else if (!client.adress){
-        return { isValid: false, propertyInvalid: "adress" };
+    } else if (!client.address){
+        return { isValid: false, propertyInvalid: "address" };
     } else if (!client.telephone){
         return { isValid: false, propertyInvalid: "telephone" };
     } else if (!client.email){
@@ -34,7 +34,7 @@ exports.create = (req, res) => {
         const newClient = new Client({
             nit: req.body.nit,
             name: req.body.name,    
-            adress: req.body.adress,    
+            address: req.body.address,    
             telephone: req.body.telephone,
             email: req.body.email,
             contact: req.body.contact
@@ -128,7 +128,7 @@ exports.update = (req, res) => {
         const clientToUpdate = {
             nit: req.body.nit,
             name: req.body.name,    
-            adress: req.body.adress,    
+            address: req.body.address,    
             telephone: req.body.telephone,
             email: req.body.email,
             contact: req.body.contact

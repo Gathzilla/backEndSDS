@@ -46,7 +46,7 @@ exports.create = (req, res) => {
             state: "processing",            
             user: req.body.user,
             provider: req.body.provider,
-            purchase: req.body.purchaseDetails
+            purchaseDetails: req.body.purchaseDetails
         });
 
         

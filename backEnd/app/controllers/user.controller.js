@@ -2,7 +2,7 @@ const User = require('../models/user.model');
 const wrapper = require('../utils/wrapper');
 const bcrypt = require('bcryptjs');
 
-let isValid = (user) => {
+let isValid = (user) => { //not missing any validation 
 
     if (!user.employeeCode) {
         return { isValid: false, propertyInvalid: "employeeCode" };
@@ -99,8 +99,8 @@ exports.search = (req, res) => {
 
     User.findOne({ [req.body.parameter] : req.body.value }, (error, user) => {
         if (error) {
-            let response = { "status": "error", "message": "Some error occurred while login the User", "error": true, "data": error.message || undefined };
-            return wrapper.sendResponse({ method: "POST /api/login", response: response, httpCode: 500, res: res });
+            let response = { "status": "error", "message": "Some error occurred while searching User", "error": true, "data": error.message || undefined };
+            return wrapper.sendResponse({ method: "POST /api/search", response: response, httpCode: 500, res: res });
         } else if (!user) {
     
 
@@ -108,8 +108,8 @@ exports.search = (req, res) => {
             return wrapper.sendResponse({ method: "GET /api/search", response: response, httpCode: 401, res: res });
         } else {
             
-            let response = { "status": "ok", "message": "User authenticated successfully", "error": false, "data": user };
-            return wrapper.sendResponse({ method: "POST /api/login", response: response, httpCode: 200, res: res });
+            let response = { "status": "ok", "message": "User found", "error": false, "data": user };
+            return wrapper.sendResponse({ method: "POST /api/search", response: response, httpCode: 200, res: res });
             
         }
     });
