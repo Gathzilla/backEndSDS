@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 
 const PurchaseSchema = mongoose.Schema({
      
-    purchaseNo: Number,
+    purchaseNo: Number, //maybe we should assign this automatically
     billNo: Number,
     date: Date,    
     provider: Provider.schema, 
@@ -15,7 +15,7 @@ const PurchaseSchema = mongoose.Schema({
     user: User.schema,
     purchaseDetails: {
 
-        product: Product.schema,
+        product: Product.schema, // remove this crap from either here or article 
         article: Article.schema,
         quantity: Number,
         unitCost: Number

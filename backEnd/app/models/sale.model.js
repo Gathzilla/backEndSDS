@@ -17,7 +17,7 @@ const SaleSchema = mongoose.Schema({
     saleDetails: {
 
         product: Product.schema,
-        article: Article,
+        article: Article.schema,
         quantity: Number,
         unitCost: Number
 
