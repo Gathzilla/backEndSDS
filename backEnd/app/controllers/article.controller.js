@@ -1,32 +1,26 @@
+const Article = require('../models/article.model.js');
 const wrapper = require('../utils/wrapper');
 
 
-let isValid = (product) => {
-    if (!product.code) {
-        return { isValid: false, propertyInvalid: "code" };
-    } else if (!product.barcode){
-        return { isValid: false, propertyInvalid: "barcode" };
-    } else if (!product.name){
-        return { isValid: false, propertyInvalid: "name" };
-    } else if (!product.description){
-        return { isValid: false, propertyInvalid: "description" };
-    } else if (!product.lastCost){
-        return { isValid: false, propertyInvalid: "lastCost" };
-    } else if (!product.brand){
-        return { isValid: false, propertyInvalid: "brand" };
-    } else if (!product.model){
-        return { isValid: false, propertyInvalid: "model" };
-    } else if (!product.manufacturer){
-        return { isValid: false, propertyInvalid: "manufacturer" };
-    }else if (!product.purchaseDetails){
-        return { isValid: false, propertyInvalid: "purchaseDetails" };
-    }else if (!product.purchaseDetails.product){
+let isValid = (article) => {
+    if (!article.product) {
         return { isValid: false, propertyInvalid: "product" };
-    } else{
+    } else if (!article.serialNumber){
+        return { isValid: false, propertyInvalid: "serialNumber" };
+    } else if (!article.ingressDate){
+        return { isValid: false, propertyInvalid: "ingressDate" };
+    } else if (!article.egressDate){
+        return { isValid: false, propertyInvalid: "egressDate" };
+    } else if (!article.unitCost){
+        return { isValid: false, propertyInvalid: "unitCost" };
+    } else if (!article.provider){
+        return { isValid: false, propertyInvalid: "provider" };
+    }else if (!article.waranty){
+        return { isValid: false, propertyInvalid: "waranty" };
+    }else{
         return {isValid: true, propertyInvalid: undefined}
     }
 }
-
 
 exports.metadata = (req, res) => {
     let response = { "status": "ok", "message": "Article metadata queried successfully", "error": false, "data": Article.schema.paths };
@@ -41,12 +35,13 @@ exports.create = (req, res) => {
     } else {
     
         const newArticle = new Article({
-            nit: req.body.nit,
-            name: req.body.name,    
-            adress: req.body.adress,    
-            telephone: req.body.telephone,
-            email: req.body.email,
-            contact: req.body.contact
+            product: req.body.product,
+            serialNumber: req.body.serialNumber,
+            ingressDate: req.body.nit,
+            egressDate: req.body.egressDate,
+            unitCost: req.body.unitCost,
+            provider: req.body.provider,
+            waranty: req.body.warranty,
         });
         
 
@@ -135,12 +130,13 @@ exports.update = (req, res) => {
     } else {
          
         const articleToUpdate = {
-            nit: req.body.nit,
-            name: req.body.name,    
-            adress: req.body.adress,    
-            telephone: req.body.telephone,
-            email: req.body.email,
-            contact: req.body.contact
+            product: req.body.product,
+            serialNumber: req.body.serialNumber,
+            ingressDate: req.body.nit,
+            egressDate: req.body.egressDate,
+            unitCost: req.body.unitCost,
+            provider: req.body.provider,
+            waranty: req.body.warranty,
         };
 
         let validation = isValid(articleToUpdate);

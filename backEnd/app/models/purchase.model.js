@@ -8,11 +8,11 @@ const PurchaseSchema = mongoose.Schema({
      
     purchaseNo: Number, //maybe we should assign this automatically
     billNo: Number,
-    date: Date,    
-    provider: Provider.schema, 
+    date: Date,
     returnDate: Date,
     state: String,
-    user: User.schema,
+    user: User.schema,    
+    provider: Provider.schema, 
     purchaseDetails: {
 
         product: Product.schema, // remove this crap from either here or article 

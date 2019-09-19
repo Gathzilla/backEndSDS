@@ -11,9 +11,9 @@ const SaleSchema = mongoose.Schema({
     date: Date,
     client: Client.schema,    
     returnDate: Date,    
-    disccount: Number,
+    discount: Number,
     state: String,
-    user: User,
+    user: User.schema,
     saleDetails: {
 
         product: Product.schema,
