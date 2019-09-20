@@ -889,6 +889,46 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "test",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\r\n\t\"purchaseNo\": 1,\r\n    \"billNo\": 1,\r\n    \"date\": \"6/09/2019\",    \r\n    \"returnDate\": \"12/12/2012\",\r\n    \"user\": {\r\n    \t\r\n\t    \"employeeCode\": \"123\",\r\n\t    \r\n    \t\t\r\n    },\r\n    \r\n    \"provider\": {\r\n            \"nit\": \"98796546\",\r\n            \"name\": \"Compañia1\",\r\n            \"adress\": \"32 calle loca - 12\",\r\n            \"phone\": \"98495419\",\r\n            \"email\": \"q@q.com\",\r\n            \"contact\": \"El pedro\"\r\n    },\r\n    \r\n    \"purchaseDetails\": \r\n    \t\r\n    \t[\r\n    \t\r\n        \t{\r\n\t\t        \"quantity\": 2,\r\n\t\t        \"articles\": [\r\n\t\t        \t{\r\n\t\t        \t\t\"product\" : {\r\n\t\t        \t\t\t\"_id\": \"5d841aedd0319a1f6c66950b\",\r\n\t\t        \t\t\t\"code\": 1,\r\n\t\t\t\t            \"barcode\": \"abc1\",\r\n\t\t\t\t            \"name\": \"Product1\",\r\n\t\t\t\t            \"description\": \"Description1\",\r\n\t\t\t\t            \"lastCost\": 1,\r\n\t\t\t\t            \"brand\": \"Brand1\",\r\n\t\t\t\t            \"model\": \"Model1\",\r\n            \t\t\t\t\"manufacturer\": \"Manufacturer1\"\r\n\t\t        \t\t},\r\n\t\t        \t\t\"serialNumber\": 111,\r\n\t\t\t            \"ingressDate\": \"6/09/2019\",\r\n\t\t\t            \"provider\": {\r\n\t\t\t            \t\"_id\": \"5d84407e5fa5854b24c4a11c\",\r\n\t\t\t            \t\"nit\": 1,\r\n\t\t\t\t            \"name\": \"Name1\",\r\n\t\t\t\t            \"address\": \"Ciudad1\",\r\n\t\t\t\t            \"phone\": 1,\r\n\t\t\t\t            \"email\": \"1@hotmail.com\",\r\n\t\t\t\t            \"contact\": \"contact1\"\r\n\t\t\t            },\r\n\t\t\t\t        \"egressDate\": \"NA\",\r\n\t\t\t\t        \"waranty\": \"YES\",\r\n\t\t\t\t        \"unitCost\": 100\r\n\t\t        \t},\r\n\t\t        \t{\r\n\t\t        \t\t\"product\" : {\r\n\t\t        \t\t\t\"_id\": \"5d841afed0319a1f6c66950c\",\r\n\t\t\t\t            \"code\": 2,\r\n\t\t\t\t            \"barcode\": \"qwe2\",\r\n\t\t\t\t            \"name\": \"Product2\",\r\n\t\t\t\t            \"description\": \"Description2\",\r\n\t\t\t\t            \"lastCost\": 2345,\r\n\t\t\t\t            \"brand\": \"Brand2\",\r\n\t\t\t\t            \"model\": \"Model2\",\r\n\t\t\t\t            \"manufacturer\": \"Manufacturer2\"\r\n\t\t        \t\t},\r\n\t\t        \t\t\"serialNumber\": 111,\r\n\t\t\t            \"ingressDate\": \"6/09/2019\",\r\n\t\t\t            \"provider\": {\r\n\t\t\t            \t\"_id\": \"5d8441895fa5854b24c4a11d\",\r\n\t\t\t\t            \"nit\": 2,\r\n\t\t\t\t            \"name\": \"Name2\",\r\n\t\t\t\t            \"address\": \"Ciudad2\",\r\n\t\t\t\t            \"phone\": 2,\r\n\t\t\t\t            \"email\": \"2@gmail.com\",\r\n\t\t\t\t            \"contact\": \"contact2\"\r\n\t\t\t            },\r\n\t\t\t\t        \"egressDate\": \"NA\",\r\n\t\t\t\t        \"waranty\": \"YES\",\r\n\t\t\t\t        \"unitCost\": 100\r\n\t\t        \t}\r\n\t\t        ]\r\n            \r\n    \t\t}\r\n    \t\r\n    \t]\r\n        \r\n       \r\n    \r\n}\r\n   \r\n    \r\n    "
+						},
+						"url": {
+							"raw": "{{server}}:{{port}}/api/purchase",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"purchase"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -1164,6 +1204,71 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "article",
+			"item": [
+				{
+					"name": "POST ARTICLE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t \"product\": {\n\t \t\"_id\": \"5d841afed0319a1f6c66950c\",\n        \"code\": 2,\n        \"barcode\": \"qwe2\",\n        \"name\": \"Product2\",\n        \"description\": \"Description2\",\n        \"lastCost\": 2345,\n        \"brand\": \"Brand2\",\n        \"model\": \"Model2\",\n        \"manufacturer\": \"Manufacturer2\"\n\t },\n\t \n    \"serialNumber\": 1,\n    \"ingressDate\": \"12/12/2012\",\n    \"egressDate\": \"String\",\n    \"unitCost\": 1,\n    \"provider\": {\n    \t\"_id\": \"5d8441895fa5854b24c4a11d\",\n        \"nit\": 2,\n        \"name\": \"Name2\",\n        \"address\": \"Ciudad2\",\n        \"phone\": 2,\n        \"email\": \"2@gmail.com\",\n        \"contact\": \"contact2\"\n    }, \n    \"waranty\": \"yes\"\n\t\n}"
+						},
+						"url": {
+							"raw": "{{server}}:{{port}}/api/article",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"article"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}:{{port}}/api/article",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"article"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "just for testing purposes ",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			}
 		}
 	]
 }

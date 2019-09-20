@@ -37,11 +37,11 @@ exports.create = (req, res) => {
         const newArticle = new Article({
             product: req.body.product,
             serialNumber: req.body.serialNumber,
-            ingressDate: req.body.nit,
+            ingressDate: req.body.ingressDate,
             egressDate: req.body.egressDate,
             unitCost: req.body.unitCost,
             provider: req.body.provider,
-            waranty: req.body.warranty,
+            waranty: req.body.waranty,
         });
         
 

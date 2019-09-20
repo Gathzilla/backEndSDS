@@ -1,7 +1,7 @@
 const Purchase = require('../models/purchase.model');
-const users = require('../controllers/user.controller');
+const articleController = require('../controllers/article.controller'); 
 const wrapper = require('../utils/wrapper');
-const bcrypt = require('bcryptjs');
+
 
 let isValid = (purchase) => {
 
@@ -13,11 +13,11 @@ let isValid = (purchase) => {
         return { isValid: false, propertyInvalid: "date" };
     }else if (!purchase.returnDate) {
         return { isValid: false, propertyInvalid: "returnDate" };
-    }else if (!purchase.user) {
+    }else if (!purchase.user) { //check this validation 
         return { isValid: false, propertyInvalid: "user" };
-    }else if (!purchase.provider) {
+    }else if (!purchase.provider) {//check this validation
         return { isValid: false, propertyInvalid: "provider" };
-    }else if (!purchase.purchaseDetails) {
+    }else if (purchase.purchaseDetails[0] == null) { //check this validation
         return { isValid: false, propertyInvalid: "purchaseDetails" };
     }else {
         return { isValid: true, propertyInvalid: undefined }
@@ -161,7 +161,7 @@ exports.apply = (req, res) => {
         };
 
       
-            
+        articleController.create;
             
             
            
@@ -169,18 +169,18 @@ exports.apply = (req, res) => {
                 .then(purchase => {
                     if (!purchase) {
                         let response = { "status": "error", "message": "Some error ocurred while updating the purchase with id" + req.body.employeeCode, "error": true, "data": undefined };
-                        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 404, res: res });
+                        return wrapper.sendResponse({ method: "PATCH /api/purchase/apply", response: response, httpCode: 404, res: res });
                     } else {
                         let response = { "status": "ok", "message": "Purchase updated successfully", "error": false, "data": purchase };
-                        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 202, res: res });
+                        return wrapper.sendResponse({ method: "PATCH /api/purchase/apply", response: response, httpCode: 202, res: res });
                     }
                 }).catch(error => {
                     if (error.kind === 'ObjectId') {
                         let response = { "status": "error", "message": "Purchase not found", "error": true, "data": undefined };
-                        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 404, res: res });
+                        return wrapper.sendResponse({ method: "PATCH /api/purchase/apply", response: response, httpCode: 404, res: res });
                     } else {
                         let response = { "status": "error", "message": "Some error occurred while updating the purchase", "error": true, "data": error.message || undefined };
-                        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 500, res: res });
+                        return wrapper.sendResponse({ method: "PATCH /api/purchase/apply", response: response, httpCode: 500, res: res });
                     }
                 });
         
@@ -192,7 +192,7 @@ exports.void = (req, res) => {
     
     if (!req.body) {
         let response = { "status": "error", "message": "Purchase content can not be empty", "error": true, "data": undefined };
-        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 400, res: res });
+        return wrapper.sendResponse({ method: "PATCH /api/purchase/void", response: response, httpCode: 400, res: res });
     } else {
          
         const purchaseToUpdate = {
@@ -210,18 +210,18 @@ exports.void = (req, res) => {
                 .then(purchase => {
                     if (!purchase) {
                         let response = { "status": "error", "message": "Some error ocurred while updating the purchase with id" + req.body.employeeCode, "error": true, "data": undefined };
-                        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 404, res: res });
+                        return wrapper.sendResponse({ method: "PATCH /api/purchase/void", response: response, httpCode: 404, res: res });
                     } else {
                         let response = { "status": "ok", "message": "Purchase updated successfully", "error": false, "data": purchase };
-                        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 202, res: res });
+                        return wrapper.sendResponse({ method: "PATCH /api/purchase/void", response: response, httpCode: 202, res: res });
                     }
                 }).catch(error => {
                     if (error.kind === 'ObjectId') {
                         let response = { "status": "error", "message": "Purchase not found", "error": true, "data": undefined };
-                        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 404, res: res });
+                        return wrapper.sendResponse({ method: "PATCH /api/purchase/void", response: response, httpCode: 404, res: res });
                     } else {
                         let response = { "status": "error", "message": "Some error occurred while updating the purchase", "error": true, "data": error.message || undefined };
-                        return wrapper.sendResponse({ method: "PATCH /api/purchase", response: response, httpCode: 500, res: res });
+                        return wrapper.sendResponse({ method: "PATCH /api/purchase/void", response: response, httpCode: 500, res: res });
                     }
                 });
         
