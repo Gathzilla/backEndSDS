@@ -2,7 +2,7 @@ const Client = require('../models/client.model.js');
 const wrapper = require('../utils/wrapper');
 
 
-let isValid = (client) => {
+let isValid = (client) => { //validation is working
     if (!client.nit) {
         return { isValid: false, propertyInvalid: "nit" };
     }  else if (!client.name){
@@ -87,7 +87,7 @@ exports.findByParameter= (req, res) => {
         } 
         else if(!client) {
             let response = {"status": "error", "message": "Error retrieving client.", "error": true, "data": undefined };
-            return wrapper.sendResponse({method: "GET /api/findClient", response: response, httpCode: 401, res: res});
+            return wrapper.sendResponse({method: "GET /api/client/findClient", response: response, httpCode: 401, res: res});
             }
         else{
             let response = { "status": "ok", "message": "Client retrieved succesfully", "error": false, "data": client};
@@ -101,7 +101,7 @@ exports.findOneClient = (req, res) => {
     Client.findById(req.params.id)
         .then(client => {
             if (!client) {
-                let response = { "status": "error", "message": "Client not found with given information" + req.params.id, "error": true, "data": undefined };
+                let response = { "status": "error", "message": "Client not found with id" + req.params.id, "error": true, "data": undefined };
                 return wrapper.sendResponse({ method: "GET /api/client/:id" + req.params.id, response: response, httpCode: 404, res: res });
             } else {
                 let response = { "status": "ok", "message": "Client queried successfully", "error": false, "data": client };
@@ -109,7 +109,7 @@ exports.findOneClient = (req, res) => {
             }
         }).catch(error => {
             if (error.kind === 'ObjectId') {
-                let response = { "status": "error", "message": "Client not found with id findOne " + req.params.id, "error": true, "data": undefined };
+                let response = { "status": "error", "message": "Client not found with id " + req.params.id, "error": true, "data": undefined };
                 return wrapper.sendResponse({ method: "GET /api/client/:id" + req.params.id, response: response, httpCode: 404, res: res });
             } else {
                 let response = { "status": "error", "message": "Error retrieving client with id " + req.params.id, "error": true, "data": error.message || undefined };
@@ -140,7 +140,7 @@ exports.update = (req, res) => {
             return wrapper.sendResponse({ method: "PUT /api/client", response: response, httpCode: 400, res: res });
         } else {
            
-            Client.findByIdAndUpdate(req.body.codigoEmpleado, clientToUpdate, { new: true, upsert: true })
+            Client.findByIdAndUpdate(req.body._id, clientToUpdate)
                 .then(client => {
                     if (!client) {
                         let response = { "status": "error", "message": "Some error ocurred while updating the client with id" + req.body.codigoEmpleado, "error": true, "data": undefined };
