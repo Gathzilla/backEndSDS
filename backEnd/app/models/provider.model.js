@@ -4,7 +4,7 @@ const ProviderSchema = mongoose.Schema({
      
     nit: Number,
     name: String,    
-    adress: String,    
+    address: String,    
     phone: Number,
     email: String,
     contact: String

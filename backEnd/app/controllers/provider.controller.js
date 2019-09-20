@@ -7,8 +7,8 @@ let isValid = (provider) => {
         return { isValid: false, propertyInvalid: "nit" };
     } else if (!provider.name){
         return { isValid: false, propertyInvalid: "name" };
-    } else if (!provider.adress){
-        return { isValid: false, propertyInvalid: "adress" };
+    } else if (!provider.address){
+        return { isValid: false, propertyInvalid: "address" };
     } else if (!provider.phone){
         return { isValid: false, propertyInvalid: "phone" };
     } else if (!provider.email){
@@ -34,7 +34,7 @@ exports.create = (req, res) => {
         const newProvider = new Provider({
             nit: req.body.nit,
             name: req.body.name,
-            adress: req.body.adress,    
+            address: req.body.address,    
             phone: req.body.phone,    
             email: req.body.email,
             contact: req.body.contact,
@@ -96,7 +96,7 @@ exports.findByParameter= (req, res) => {
             }
         } 
         )};
-// close the find element
+
 
 exports.findOneProvider = (req, res) => {
     Provider.findById(req.params.id)
@@ -129,7 +129,7 @@ exports.update = (req, res) => {
         const providerToUpdate = {
             nit: req.body.nit,
             name: req.body.name,
-            adress: req.body.adress,    
+            address: req.body.address,    
             phone: req.body.phone,    
             email: req.body.email,
             contact: req.body.contact
@@ -141,7 +141,7 @@ exports.update = (req, res) => {
             return wrapper.sendResponse({ method: "PUT /api/provider", response: response, httpCode: 400, res: res });
         } else {
            
-            Provider.findByIdAndUpdate(req.body.codigoEmpleado, providerToUpdate, { new: true, upsert: true })
+            Provider.findByIdAndUpdate(req.body._id, providerToUpdate)
                 .then(provider => {
                     if (!provider) {
                         let response = { "status": "error", "message": "Some error ocurred while updating the provider with id" + req.body.codigoEmpleado, "error": true, "data": undefined };

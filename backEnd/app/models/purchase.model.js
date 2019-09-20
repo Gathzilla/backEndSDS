@@ -13,7 +13,7 @@ const PurchaseSchema = mongoose.Schema({
     state: String,
     user: User.schema,    
     provider: Provider.schema, 
-    purchaseDetails: {
+    purchaseDetails: { //for each product there should be a purchase detail 
 
         product: Product.schema, // remove this crap from either here or article 
         article: Article.schema,
