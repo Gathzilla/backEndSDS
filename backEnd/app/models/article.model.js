@@ -4,12 +4,12 @@ const Provider = require('../models/provider.model.js');
 
 const ArticleSchema = mongoose.Schema({
     
-    product: Product.schema, //i should instead get the product id, and then look for it
+    product: Product.schema,
     serialNumber: Number,
     ingressDate: Date,
-    egressDate: Date,
-    unitCost: String,
-    provider: Provider.schema, //i should instead get the provider id, and then look for it not necesarry
+    egressDate: Date | String,
+    unitCost: Number,
+    provider: Provider.schema, 
     waranty: String,
 
 }, {
