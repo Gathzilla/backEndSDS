@@ -150,7 +150,7 @@ exports.update = (req, res) => {
             Product.findByIdAndUpdate(req.body._id, productToUpdate)
                 .then(product => {
                     if (!product) {
-                        let response = { "status": "error", "message": "Some error ocurred while updating the product with " + req.body.employeeCode, "error": true, "data": undefined };
+                        let response = { "status": "error", "message": "Some error ocurred while updating the product with " + req.body._id, "error": true, "data": undefined };
                         return wrapper.sendResponse({ method: "PUT /api/product", response: response, httpCode: 404, res: res });
                     } else {
                         let response = { "status": "ok", "message": "Product updated successfully", "error": false, "data": productToUpdate };
