@@ -257,7 +257,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{    \n\t\"_id\": \"5d841afed0319a1f6c66950c\",\n    \"code\": 2,\n    \"barcode\": \"qwe2\",\n    \"name\": \"Product2\",\n    \"description\": \"Description2\",\n    \"lastCost\": 2345,\n    \"brand\": \"Brand2\",\n    \"model\": \"Model2\",\n    \"manufacturer\": \"Manufacturer2\"\n}"
+							"raw": "{    \n\t\"_id\": \"5d841aedd0319a1f6c66950b\",\n    \"code\": 3,\n    \"barcode\": \"qwe3\",\n    \"name\": \"Product3\",\n    \"description\": \"Description3\",\n    \"lastCost\": 2345,\n    \"brand\": \"Brand3\",\n    \"model\": \"Model3\",\n    \"manufacturer\": \"Manufacturer3\"\n}"
 						},
 						"url": {
 							"raw": "{{server}}:{{port}}/api/product",
