@@ -16,7 +16,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiR2VyYXJkbyIsImxhc3ROYW1lIjoiVHpvYyIsIm5pdCI6NDU2LCJlbWFpbCI6ImdhdGgyLTk2QGhvdG1haWwuY29tIiwibmljayI6IkdhdGgiLCJwYXNzd29yZCI6IiQyYSQwOCRIUm9IZlkvUW9DWVdsT0llQ0JtdmguZ1pJczE2WnkxMzJlSFhsNjZubWhwemJBbTVWSVFsNiIsInJvbGVzIjoiYWRtaW4iLCJpYXQiOjE1Njc4MTI0MTIsImV4cCI6MTU2Nzg5ODgxMn0.HWl3iWDqsNTPMZXnNITjA3hO_vhRXLbooOtVFiwlkPs",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -32,7 +32,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\r\n\t\"purchaseNo\": 2,\r\n    \"billNo\": 1,\r\n    \"date\": \"6/09/2019\",    \r\n    \"returnDate\": \"12/12/2012\",\r\n    \"user\": {\r\n    \t\r\n\t    \"employeeCode\": \"123\",\r\n\t    \"name\": \"Gerardo\",\r\n\t    \"lastName\": \"Tzoc\",    \r\n\t    \"nit\": 65489,    \r\n\t    \"accountNumber\": 6984798,\r\n\t    \"phone\": 5721987987,\r\n\t    \"email\": \"g@h.com\",\r\n\t    \"nick\": \"gath\",\r\n\t    \"password\": \"123\",\r\n\t    \"roles\": \"admin\"\r\n    \t\t\r\n    },\r\n    \r\n    \"provider\": {\r\n            \"_id\": \"5d7316cdb57f7b5398629941\",\r\n            \"employeeCode\": 123,\r\n            \"name\": \"Gerardo\",\r\n            \"lastName\": \"Tzoc\",\r\n            \"nit\": 65489,\r\n            \"accountNumber\": 6984798,\r\n            \"phone\": 5721987987,\r\n            \"email\": \"g@h.com\",\r\n            \"nick\": \"gath\",\r\n            \"password\": \"123\",\r\n            \"roles\": \"admin\"\r\n        }\r\n    \r\n}\r\n   \r\n    \r\n    "
+							"raw": "{\r\n\t\r\n\t\"purchaseNo\": 1,\r\n    \"billNo\": 1,\r\n    \"date\": \"6/09/2019\",    \r\n    \"returnDate\": \"12/12/2012\",\r\n    \"user\": {\r\n    \t\r\n\t    \"employeeCode\": \"123\",\r\n\t    \"name\": \"Gerardo\",\r\n\t    \"lastName\": \"Tzoc\",    \r\n\t    \"nit\": 65489,    \r\n\t    \"accountNumber\": 6984798,\r\n\t    \"phone\": 5721987987,\r\n\t    \"email\": \"g@h.com\",\r\n\t    \"nick\": \"gath\",\r\n\t    \"password\": \"123\",\r\n\t    \"roles\": \"admin\"\r\n    \t\t\r\n    },\r\n    \r\n    \"provider\": {\r\n            \"nit\": \"98796546\",\r\n            \"name\": \"Compañia1\",\r\n            \"adress\": \"32 calle loca - 12\",\r\n            \"phone\": \"98495419\",\r\n            \"email\": \"q@q.com\",\r\n            \"contact\": \"El pedro\"\r\n    },\r\n    \r\n    \"purchaseDetails\": {\r\n    \t\r\n    \t\"product\": {\r\n    \t\t\r\n    \t\t\"code\": 123,\r\n    \t\t\"barcode\": \"asd\",\r\n    \t\t\"name\": \"asd\",    \r\n\t\t    \"description\": \"hey\",    \r\n\t\t    \"lastCost\": 321,\r\n\t\t    \"brand\": \"nike\",\r\n\t\t    \"model\": \"puma\",\r\n\t\t    \"manufacturer\": \"adidas\"\r\n    \t\t\r\n    \t},\r\n    \t\r\n    \t\"article\": {\r\n    \t\t\"product\": {\r\n    \t\t\t\t\"code\": 123,\r\n\t\t    \t\t\"barcode\": \"asd\",\r\n\t\t    \t\t\"name\": \"asd\",    \r\n\t\t\t\t    \"description\": \"hey\",    \r\n\t\t\t\t    \"lastCost\": 321,\r\n\t\t\t\t    \"brand\": \"nike\",\r\n\t\t\t\t    \"model\": \"puma\",\r\n\t\t\t\t    \"manufacturer\": \"adidas\"\t\r\n    \t\t},\r\n\t\t    \"serialNumber\": 123,\r\n\t\t    \"ingressDate\": \"12/12/2012\",\r\n\t\t    \"egressDate\": \"12/12/2012\",\r\n\t\t    \"unitCost\": 321,\r\n\t\t    \"provider\": {\r\n\t\t    \t\"nit\": \"98796546\",\r\n\t            \"name\": \"Compañia1\",\r\n\t            \"adress\": \"32 calle loca - 12\",\r\n\t            \"phone\": \"98495419\",\r\n\t            \"email\": \"q@q.com\",\r\n\t            \"contact\": \"El pedro\"\r\n\t\t    },\r\n\t\t    \"waranty\": \"yes\"\r\n    \t},\r\n    \t\r\n    \t\"quantity\": 1,\r\n    \t\"unitCost\": 2\r\n    \t\r\n    \t\r\n    \t\r\n    \t\r\n    }\r\n        \r\n       \r\n    \r\n}\r\n   \r\n    \r\n    "
 						},
 						"url": {
 							"raw": "{{server}}:{{port}}/api/purchase",
@@ -51,6 +51,46 @@
 				{
 					"name": "purchase metadata",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiR2VyYXJkbyIsImxhc3ROYW1lIjoiVHpvYyIsIm5pdCI6NDU2LCJlbWFpbCI6ImdhdGgyLTk2QGhvdG1haWwuY29tIiwibmljayI6IkdhdGgiLCJwYXNzd29yZCI6IiQyYSQwOCRIUm9IZlkvUW9DWVdsT0llQ0JtdmguZ1pJczE2WnkxMzJlSFhsNjZubWhwemJBbTVWSVFsNiIsInJvbGVzIjoiYWRtaW4iLCJpYXQiOjE1Njc4MTI0MTIsImV4cCI6MTU2Nzg5ODgxMn0.HWl3iWDqsNTPMZXnNITjA3hO_vhRXLbooOtVFiwlkPs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}:{{port}}/api/purchase/metadata",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"purchase",
+								"metadata"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Metadata",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiR2VyYXJkbyIsImxhc3ROYW1lIjoiVHpvYyIsIm5pdCI6NDU2LCJlbWFpbCI6ImdhdGgyLTk2QGhvdG1haWwuY29tIiwibmljayI6IkdhdGgiLCJwYXNzd29yZCI6IiQyYSQwOCRIUm9IZlkvUW9DWVdsT0llQ0JtdmguZ1pJczE2WnkxMzJlSFhsNjZubWhwemJBbTVWSVFsNiIsInJvbGVzIjoiYWRtaW4iLCJpYXQiOjE1Njc2NTY2NTQsImV4cCI6MTU2Nzc0MzA1NH0.Q46gONrWqHX-x2l0zirSU7Y5t5P-pZf6Tg3AybI9liM",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -134,7 +174,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{    \n\t\"code\": \"00002\",\n    \"barcode\": \"1234556\",\n    \"name\": \"Product to delete sample\",    \n    \"description\": \"Sample description\",    \n    \"lastCost\": \"1\",\n    \"brand\": \"sample\",\n    \"model\": \"AA-10\",\n    \"manufacturer\": \"BOSCH OE\"\n}"
+							"raw": "{    \n\t\"code\": 3,\n    \"barcode\": \"abc3\",\n    \"name\": \"Product3\",    \n    \"description\": \"Description3\",    \n    \"lastCost\": 3,\n    \"brand\": \"Brand3\",\n    \"model\": \"Model3\",\n    \"manufacturer\": \"Manufacturer3\"\n}"
 						},
 						"url": {
 							"raw": "{{server}}:{{port}}/api/product",
@@ -177,7 +217,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"parameter\": \"name\",\n\t\"value\": \"Zapata\"\n}"
+							"raw": "{\n\t\"parameter\": \"name\",\n\t\"value\": \"Product2\"\n}"
 						},
 						"url": {
 							"raw": "{{server}}:{{port}}/api/find",
@@ -217,7 +257,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{    \n\t\"code\": \"00002\",\n    \"barcode\": \"1234556\",\n    \"name\": \"Product to update\",    \n    \"description\": \"Pieza de un sistema de freno\",    \n    \"lastCost\": \"1\",\n    \"brand\": \"sample\",\n    \"model\": \"AA-10\",\n    \"manufacturer\": \"BOSCH OE\"\n}"
+							"raw": "{    \n\t\"_id\": \"5d841afed0319a1f6c66950c\",\n    \"code\": 2,\n    \"barcode\": \"qwe2\",\n    \"name\": \"Product2\",\n    \"description\": \"Description2\",\n    \"lastCost\": 2345,\n    \"brand\": \"Brand2\",\n    \"model\": \"Model2\",\n    \"manufacturer\": \"Manufacturer2\"\n}"
 						},
 						"url": {
 							"raw": "{{server}}:{{port}}/api/product",
@@ -249,7 +289,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{server}}:{{port}}/api/product/{id}",
+							"raw": "{{server}}:{{port}}/api/product/5d841afed0319a1f6c66950c",
 							"host": [
 								"{{server}}"
 							],
@@ -257,9 +297,10 @@
 							"path": [
 								"api",
 								"product",
-								"{id}"
+								"5d841afed0319a1f6c66950c"
 							]
-						}
+						},
+						"description": "finds a product by id (created by mongodb)\n\nID must be placed after product/\n\nExample {{server}}:{{port}}/api/product/5d841afed0319a1f6c66950c"
 					},
 					"response": []
 				},
@@ -290,7 +331,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{server}}:{{port}}/api/product/{id}",
+							"raw": "{{server}}:{{port}}/api/product/5d841b04d0319a1f6c66950d",
 							"host": [
 								"{{server}}"
 							],
@@ -298,7 +339,37 @@
 							"path": [
 								"api",
 								"product",
-								"{id}"
+								"5d841b04d0319a1f6c66950d"
+							]
+						},
+						"description": "deletes a product by id (created by mongodb)\n\nID must be placed after product/\n\nExample {{server}}:{{port}}/api/product/5d841afed0319a1f6c66950c"
+					},
+					"response": []
+				},
+				{
+					"name": "FIND ALL PRODUCTS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}:{{port}}/api/product",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"product"
 							]
 						}
 					},
@@ -340,7 +411,7 @@
 					"response": []
 				},
 				{
-					"name": "POST Add Client",
+					"name": "POST CREATE Client",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -353,7 +424,18 @@
 							]
 						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"nit\": 3,\n    \"name\": \"Provider3\",    \n    \"address\": \"Address3\",    \n    \"telephone\": 3,\n    \"email\": \"g@h.com\",\n    \"contact\": \"Contact3\"\n\t\n}"
+						},
 						"url": {
 							"raw": "{{server}}:{{port}}/api/client",
 							"host": [
@@ -395,7 +477,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"parameter\": \"name\",\n\t\"value\": \"Asegura Camino\"\n}"
+							"raw": "{\n\t\"parameter\": \"name\",\n\t\"value\": \"Provider2\"\n}"
 						},
 						"url": {
 							"raw": "{{server}}:{{port}}/api/findClient",
@@ -435,7 +517,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{    \n\t\"nit\": \"67890\",\n    \"name\": \"Aseguradora Naranjo\",    \n    \"adress\": \"Ciudad\",    \n    \"telephone\": \"64783267\",\n    \"email\": \"naranjo1@hotmail.com\",\n    \"contact\": \"Antonio Cruz\"\n}"
+							"raw": "{    \n\t\"_id\": \"5d84149735acee41dc4d9920\",\n\t\"nit\": \"2\",\n    \"name\": \"Provider2\",    \n    \"address\": \"Address2\",    \n    \"telephone\": \"2\",\n    \"email\": \"2@h.com\",\n    \"contact\": \"Contact2\"\n}"
 						},
 						"url": {
 							"raw": "{{server}}:{{port}}/api/client",
@@ -447,7 +529,8 @@
 								"api",
 								"client"
 							]
-						}
+						},
+						"description": "Updates a client by id\n\nRequires all client info to be sent again\n\nid must be in this format \"_id\""
 					},
 					"response": []
 				},
@@ -481,7 +564,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{server}}:{{port}}/api/client/{id}",
+							"raw": "{{server}}:{{port}}/api/client/5d841359decd291b589ce186",
 							"host": [
 								"{{server}}"
 							],
@@ -489,9 +572,10 @@
 							"path": [
 								"api",
 								"client",
-								"{id}"
+								"5d841359decd291b589ce186"
 							]
-						}
+						},
+						"description": "Looks for a client with the mongo ID \n\nID needs to be after client/\n\nExample {{server}}:{{port}}/api/client/5d841359decd291b589ce186"
 					},
 					"response": []
 				},
@@ -511,7 +595,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{server}}:{{port}}/api/client/{id}",
+							"raw": "{{server}}:{{port}}/api/client/5d8414a435acee41dc4d9921",
 							"host": [
 								"{{server}}"
 							],
@@ -519,8 +603,20 @@
 							"path": [
 								"api",
 								"client",
-								"{id}"
+								"5d8414a435acee41dc4d9921"
 							]
+						},
+						"description": "Deletes a client by id \n\nID must be placed after client/\n\nExample {{server}}:{{port}}/api/client/5d8414a435acee41dc4d9921"
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL CLIENTS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
 						}
 					},
 					"response": []
@@ -760,88 +856,277 @@
 			]
 		},
 		{
-			"name": "login",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\n\t\"name\" : \"Gerardo\",\n\t\"password\" : \"Gath\"\n\t\n\t\n\t\n}"
-				},
-				"url": {
-					"raw": "{{server}}:{{port}}/api/login",
-					"host": [
-						"{{server}}"
-					],
-					"port": "{{port}}",
-					"path": [
-						"api",
-						"login"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "register",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": ""
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "search",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2RpZ29FbXBsZWFkbyI6MTIzLCJuYW1lIjoiR2VyYXJkbyIsImxhc3ROYW1lIjoiVHpvYyIsIm5pdCI6NDU2LCJudW1lcm9DdWVudGEiOjc4OSwidGVsZWZvbm8iOjU3MjE5ODQzLCJlbWFpbCI6ImdhdGgyLTk2QGhvdG1haWwuY29tIiwibmljayI6IkdhdGgiLCJwYXNzd29yZCI6IiQyYSQwOCRIUm9IZlkvUW9DWVdsT0llQ0JtdmguZ1pJczE2WnkxMzJlSFhsNjZubWhwemJBbTVWSVFsNiIsInJvbGVzIjoiYWRtaW4iLCJpYXQiOjE1NjcxMzkzNDgsImV4cCI6MTU2NzIyNTc0OH0.mkY5aAc7tmUKeSzTB2iVc9Kbe32ByRc2oM36eq1V4Dw",
-							"type": "string"
+			"name": "users (all tested)",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\r\n\t\"employeeCode\": \"456\" ,\r\n    \"name\": \"Edel;\",\r\n    \"lastName\": \"Morataya\" ,    \r\n    \"nit\": \"951947734\",    \r\n    \"accountNumber\": \"65194673\",\r\n    \"phone\": \"191987432\" ,\r\n    \"email\": \"e@g.com\",\r\n    \"nick\": \"EdelMorataya\",\r\n    \"password\": \"456\" ,\r\n    \"roles\": \"admin\"\r\n\t\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{server}}:{{port}}/api/register",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"register"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\n\t\"parameter\": \"name\",\n\t\"value\": \"Gerardo\" \n    \n            \n}"
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"employeeCode\" : \"572\",\n\t\"password\" : \"725\"\n\t\n\t\n\t\n}"
+						},
+						"url": {
+							"raw": "{{server}}:{{port}}/api/login",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{server}}:{{port}}/api/search",
-					"host": [
-						"{{server}}"
-					],
-					"port": "{{port}}",
-					"path": [
-						"api",
-						"search"
-					]
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"_id\": \"5d8407898b344726746675a1\",\r\n\t\"employeeCode\": \"19541943\" ,\r\n    \"name\": \"Gearardo;\",\r\n    \"lastName\": \"Tzoc\" ,    \r\n    \"nit\": \"9519843\",    \r\n    \"accountNumber\": \"198448632\",\r\n    \"phone\": \"6513218\" ,\r\n    \"email\": \"g@h.com\",\r\n    \"nick\": \"Gathzilla\",\r\n    \"password\": \"10027621\" ,\r\n    \"roles\": \"admin\"\r\n            \r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{server}}:{{port}}/api/user",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"user"
+							]
+						},
+						"description": "To update an user you need to send all user information even if you are not updating it. \n\nYou also need to include the _id created by mongo on the same format  \"_id\": \"5d8407898b344726746675a1\" else it won't work"
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"parameter\" : \"nit\",\n\t\"value\" : \"951947734\"\n    \n}"
+						},
+						"url": {
+							"raw": "{{server}}:{{port}}/api/search",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"search"
+							]
+						},
+						"description": "Searches for an user using a parameter and value"
+					},
+					"response": []
+				},
+				{
+					"name": "GET USER METADATA",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}:{{port}}/api/user/metadata",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"user",
+								"metadata"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND ALL USERS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}:{{port}}/api/user/",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						},
+						"description": "Finds all users\n"
+					},
+					"response": []
+				},
+				{
+					"name": "FIND ONE USER BY ID ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}:{{port}}/api/user/5d8406134862fe0dc4c99af6",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"user",
+								"5d8406134862fe0dc4c99af6"
+							]
+						},
+						"description": "place the ID after \"user/\"\nexample  /api/user/5d8406134862fe0dc4c99af6\n\nID is the id created by mongo"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE AN USER",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}:{{port}}/api/user/5d8407898b344726746675a1",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"user",
+								"5d8407898b344726746675a1"
+							]
+						},
+						"description": "requieres the id to delete after /user/\n\nexample {{server}}:{{port}}/api/user/5d8407898b344726746675a1\n\nID is the id given by mongo"
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }
