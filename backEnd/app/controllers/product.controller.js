@@ -2,7 +2,7 @@ const Product = require('../models/product.model.js');
 const wrapper = require('../utils/wrapper');
 
 
-let isValid = (product) => {
+let isValid = (product) => { //validation working 
     if (!product.code) {
         return { isValid: false, propertyInvalid: "code" };
     } else if (!product.barcode){
@@ -147,13 +147,13 @@ exports.update = (req, res) => {
             return wrapper.sendResponse({ method: "PUT /api/product", response: response, httpCode: 400, res: res });
         } else {
            
-            Product.findByIdAndUpdate(req.body._id, productToUpdate, { new: true, upsert: true })
+            Product.findByIdAndUpdate(req.body._id, productToUpdate)
                 .then(product => {
                     if (!product) {
                         let response = { "status": "error", "message": "Some error ocurred while updating the product with " + req.body.employeeCode, "error": true, "data": undefined };
                         return wrapper.sendResponse({ method: "PUT /api/product", response: response, httpCode: 404, res: res });
                     } else {
-                        let response = { "status": "ok", "message": "Product updated successfully", "error": false, "data": product };
+                        let response = { "status": "ok", "message": "Product updated successfully", "error": false, "data": productToUpdate };
                         return wrapper.sendResponse({ method: "PUT /api/product", response: response, httpCode: 202, res: res });
                     }
                 }).catch(error => {
