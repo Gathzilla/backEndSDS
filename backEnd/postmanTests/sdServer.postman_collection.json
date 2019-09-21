@@ -32,7 +32,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\r\n\t\"purchaseNo\": 1,\r\n    \"billNo\": 1,\r\n    \"date\": \"6/09/2019\",    \r\n    \"returnDate\": \"12/12/2012\",\r\n    \"user\": {\r\n    \t\r\n\t    \"employeeCode\": \"123\",\r\n\t    \"name\": \"Gerardo\",\r\n\t    \"lastName\": \"Tzoc\",    \r\n\t    \"nit\": 65489,    \r\n\t    \"accountNumber\": 6984798,\r\n\t    \"phone\": 5721987987,\r\n\t    \"email\": \"g@h.com\",\r\n\t    \"nick\": \"gath\",\r\n\t    \"password\": \"123\",\r\n\t    \"roles\": \"admin\"\r\n    \t\t\r\n    },\r\n    \r\n    \"provider\": {\r\n            \"nit\": \"98796546\",\r\n            \"name\": \"Compañia1\",\r\n            \"adress\": \"32 calle loca - 12\",\r\n            \"phone\": \"98495419\",\r\n            \"email\": \"q@q.com\",\r\n            \"contact\": \"El pedro\"\r\n    },\r\n    \r\n    \"purchaseDetails\": \r\n    \t\r\n    \t[\r\n    \t\r\n        \t{\r\n\t\t        \"quantity\": 2,\r\n\t\t        \"articles\": [\r\n\t\t        \t{\r\n\t\t        \t\t\"product\" : {\r\n\t\t        \t\t\t\"_id\": \"5d841aedd0319a1f6c66950b\",\r\n\t\t        \t\t\t\"code\": 1,\r\n\t\t\t\t            \"barcode\": \"abc1\",\r\n\t\t\t\t            \"name\": \"Product1\",\r\n\t\t\t\t            \"description\": \"Description1\",\r\n\t\t\t\t            \"lastCost\": 1,\r\n\t\t\t\t            \"brand\": \"Brand1\",\r\n\t\t\t\t            \"model\": \"Model1\",\r\n            \t\t\t\t\"manufacturer\": \"Manufacturer1\"\r\n\t\t        \t\t},\r\n\t\t        \t\t\"serialNumber\": 111,\r\n\t\t\t            \"ingressDate\": \"6/09/2019\",\r\n\t\t\t            \"provider\": {\r\n\t\t\t            \t\"_id\": \"5d84407e5fa5854b24c4a11c\",\r\n\t\t\t            \t\"nit\": 1,\r\n\t\t\t\t            \"name\": \"Name1\",\r\n\t\t\t\t            \"address\": \"Ciudad1\",\r\n\t\t\t\t            \"phone\": 1,\r\n\t\t\t\t            \"email\": \"1@hotmail.com\",\r\n\t\t\t\t            \"contact\": \"contact1\"\r\n\t\t\t            },\r\n\t\t\t\t        \"egressDate\": \"NA\",\r\n\t\t\t\t        \"waranty\": \"YES\",\r\n\t\t\t\t        \"unitCost\": 100\r\n\t\t        \t},\r\n\t\t        \t{\r\n\t\t        \t\t\"product\" : {\r\n\t\t        \t\t\t\"_id\": \"5d841afed0319a1f6c66950c\",\r\n\t\t\t\t            \"code\": 2,\r\n\t\t\t\t            \"barcode\": \"qwe2\",\r\n\t\t\t\t            \"name\": \"Product2\",\r\n\t\t\t\t            \"description\": \"Description2\",\r\n\t\t\t\t            \"lastCost\": 2345,\r\n\t\t\t\t            \"brand\": \"Brand2\",\r\n\t\t\t\t            \"model\": \"Model2\",\r\n\t\t\t\t            \"manufacturer\": \"Manufacturer2\"\r\n\t\t        \t\t},\r\n\t\t        \t\t\"serialNumber\": 111,\r\n\t\t\t            \"ingressDate\": \"6/09/2019\",\r\n\t\t\t            \"provider\": {\r\n\t\t\t            \t\"_id\": \"5d8441895fa5854b24c4a11d\",\r\n\t\t\t\t            \"nit\": 2,\r\n\t\t\t\t            \"name\": \"Name2\",\r\n\t\t\t\t            \"address\": \"Ciudad2\",\r\n\t\t\t\t            \"phone\": 2,\r\n\t\t\t\t            \"email\": \"2@gmail.com\",\r\n\t\t\t\t            \"contact\": \"contact2\"\r\n\t\t\t            },\r\n\t\t\t\t        \"egressDate\": \"NA\",\r\n\t\t\t\t        \"waranty\": \"YES\",\r\n\t\t\t\t        \"unitCost\": 100\r\n\t\t        \t}\r\n\t\t        ]\r\n            \r\n    \t\t}\r\n    \t\r\n    \t]\r\n        \r\n       \r\n    \r\n}\r\n   \r\n    \r\n    "
+							"raw": "{\r\n\t\r\n\t\"purchaseNo\": 1,\r\n    \"billNo\": 1,\r\n    \"date\": \"6/09/2019\",    \r\n    \"returnDate\": \"12/12/2012\",\r\n    \"user\": {\r\n    \t\r\n\t    \"employeeCode\": \"123\",\r\n\t    \"name\": \"Gerardo\",\r\n\t    \"lastName\": \"Tzoc\",    \r\n\t    \"nit\": 65489,    \r\n\t    \"accountNumber\": 6984798,\r\n\t    \"phone\": 5721987987,\r\n\t    \"email\": \"g@h.com\",\r\n\t    \"nick\": \"gath\",\r\n\t    \"password\": \"123\",\r\n\t    \"roles\": \"admin\"\r\n    \t\t\r\n    },\r\n    \r\n    \"provider\": {\r\n            \"nit\": \"98796546\",\r\n            \"name\": \"Compañia1\",\r\n            \"adress\": \"32 calle loca - 12\",\r\n            \"phone\": \"98495419\",\r\n            \"email\": \"q@q.com\",\r\n            \"contact\": \"El pedro\"\r\n    },\r\n    \r\n    \"purchaseDetails\": \r\n    \t\r\n    \t[\r\n    \t\r\n        \t{\r\n\t\t        \"quantity\": 2,\r\n\t\t        \"articles\": [\r\n\t\t        \t{\r\n\t\t        \t\t\"product\" : {\r\n\t\t        \t\t\t\"_id\": \"5d841aedd0319a1f6c66950b\",\r\n\t\t        \t\t\t\"code\": 1,\r\n\t\t\t\t            \"barcode\": \"abc1\",\r\n\t\t\t\t            \"name\": \"Product1\",\r\n\t\t\t\t            \"description\": \"Description1\",\r\n\t\t\t\t            \"lastCost\": 1,\r\n\t\t\t\t            \"brand\": \"Brand1\",\r\n\t\t\t\t            \"model\": \"Model1\",\r\n            \t\t\t\t\"manufacturer\": \"Manufacturer1\"\r\n\t\t        \t\t},\r\n\t\t        \t\t\"serialNumber\": 111,\r\n\t\t\t            \"ingressDate\": \"6/09/2019\",\r\n\t\t\t            \"provider\": {\r\n\t\t\t            \t\"_id\": \"5d84407e5fa5854b24c4a11c\",\r\n\t\t\t            \t\"nit\": 1,\r\n\t\t\t\t            \"name\": \"Name1\",\r\n\t\t\t\t            \"address\": \"Ciudad1\",\r\n\t\t\t\t            \"phone\": 1,\r\n\t\t\t\t            \"email\": \"1@hotmail.com\",\r\n\t\t\t\t            \"contact\": \"contact1\"\r\n\t\t\t            },\r\n\t\t\t\t        \"egressDate\": \"NA\",\r\n\t\t\t\t        \"waranty\": \"YES\",\r\n\t\t\t\t        \"unitCost\": 100\r\n\t\t        \t},\r\n\t\t        \t{\r\n\t\t        \t\t\"product\" : {\r\n\t\t        \t\t\t\"_id\": \"5d841aedd0319a1f6c66950b\",\r\n\t\t        \t\t\t\"code\": 1,\r\n\t\t\t\t            \"barcode\": \"abc1\",\r\n\t\t\t\t            \"name\": \"Product1\",\r\n\t\t\t\t            \"description\": \"Description1\",\r\n\t\t\t\t            \"lastCost\": 1,\r\n\t\t\t\t            \"brand\": \"Brand1\",\r\n\t\t\t\t            \"model\": \"Model1\",\r\n            \t\t\t\t\"manufacturer\": \"Manufacturer1\"\r\n\t\t        \t\t},\r\n\t\t        \t\t\"serialNumber\": 222,\r\n\t\t\t            \"ingressDate\": \"6/09/2019\",\r\n\t\t\t            \"provider\": {\r\n\t\t\t            \t\"_id\": \"5d84407e5fa5854b24c4a11c\",\r\n\t\t\t            \t\"nit\": 1,\r\n\t\t\t\t            \"name\": \"Name1\",\r\n\t\t\t\t            \"address\": \"Ciudad1\",\r\n\t\t\t\t            \"phone\": 1,\r\n\t\t\t\t            \"email\": \"1@hotmail.com\",\r\n\t\t\t\t            \"contact\": \"contact1\"\r\n\t\t\t            },\r\n\t\t\t\t        \"egressDate\": \"NA\",\r\n\t\t\t\t        \"waranty\": \"YES\",\r\n\t\t\t\t        \"unitCost\": 100\r\n\t\t        \t}\r\n\t\t        ]\r\n            \r\n    \t\t},\r\n    \t\t{\r\n\t\t        \"quantity\": 1,\r\n\t\t        \"articles\": [\r\n\t\t        \t{\r\n\t\t        \t\t\"product\" : {\r\n\t\t        \t\t\t\"code\": 4,\r\n\t\t\t\t\t\t    \"barcode\": \"abc4\",\r\n\t\t\t\t\t\t    \"name\": \"Product4\",    \r\n\t\t\t\t\t\t    \"description\": \"Description4\",    \r\n\t\t\t\t\t\t    \"lastCost\": 4,\r\n\t\t\t\t\t\t    \"brand\": \"Brand4\",\r\n\t\t\t\t\t\t    \"model\": \"Model4\",\r\n\t\t\t\t\t\t    \"manufacturer\": \"Manufacturer4\"\r\n\t\t        \t\t},\r\n\t\t        \t\t\"serialNumber\": 333,\r\n\t\t\t            \"ingressDate\": \"6/09/2019\",\r\n\t\t\t            \"provider\": {\r\n\t\t\t            \t\"_id\": \"5d84407e5fa5854b24c4a11c\",\r\n\t\t\t            \t\"nit\": 1,\r\n\t\t\t\t            \"name\": \"Name1\",\r\n\t\t\t\t            \"address\": \"Ciudad1\",\r\n\t\t\t\t            \"phone\": 1,\r\n\t\t\t\t            \"email\": \"1@hotmail.com\",\r\n\t\t\t\t            \"contact\": \"contact1\"\r\n\t\t\t            },\r\n\t\t\t\t        \"egressDate\": \"NA\",\r\n\t\t\t\t        \"waranty\": \"YES\",\r\n\t\t\t\t        \"unitCost\": 100\r\n\t\t        \t}\r\n\t\t        \t\r\n\t\t        ]\r\n            \r\n    \t\t}\r\n    \t\r\n    \t]\r\n        \r\n       \r\n    \r\n}\r\n   \r\n    \r\n    "
 						},
 						"url": {
 							"raw": "{{server}}:{{port}}/api/purchase",
@@ -86,7 +86,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiR2VyYXJkbyIsImxhc3ROYW1lIjoiVHpvYyIsIm5pdCI6NDU2LCJlbWFpbCI6ImdhdGgyLTk2QGhvdG1haWwuY29tIiwibmljayI6IkdhdGgiLCJwYXNzd29yZCI6IiQyYSQwOCRIUm9IZlkvUW9DWVdsT0llQ0JtdmguZ1pJczE2WnkxMzJlSFhsNjZubWhwemJBbTVWSVFsNiIsInJvbGVzIjoiYWRtaW4iLCJpYXQiOjE1Njc2NTY2NTQsImV4cCI6MTU2Nzc0MzA1NH0.Q46gONrWqHX-x2l0zirSU7Y5t5P-pZf6Tg3AybI9liM",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -103,6 +103,47 @@
 								"api",
 								"purchase",
 								"metadata"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH APPLY",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"_id\" : \"5d8489a64527f31d70f91125\"\n\t\n}"
+						},
+						"url": {
+							"raw": "{{server}}:{{port}}/api/purchase/apply",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"purchase",
+								"apply"
 							]
 						}
 					},
@@ -174,7 +215,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{    \n\t\"code\": 3,\n    \"barcode\": \"abc3\",\n    \"name\": \"Product3\",    \n    \"description\": \"Description3\",    \n    \"lastCost\": 3,\n    \"brand\": \"Brand3\",\n    \"model\": \"Model3\",\n    \"manufacturer\": \"Manufacturer3\"\n}"
+							"raw": "{    \n\t\"code\": 4,\n    \"barcode\": \"abc4\",\n    \"name\": \"Product4\",    \n    \"description\": \"Description4\",    \n    \"lastCost\": 4,\n    \"brand\": \"Brand4\",\n    \"model\": \"Model4\",\n    \"manufacturer\": \"Manufacturer4\"\n}"
 						},
 						"url": {
 							"raw": "{{server}}:{{port}}/api/product",
@@ -260,14 +301,15 @@
 							"raw": "{    \n\t\"_id\": \"5d841aedd0319a1f6c66950b\",\n    \"code\": 3,\n    \"barcode\": \"qwe3\",\n    \"name\": \"Product3\",\n    \"description\": \"Description3\",\n    \"lastCost\": 2345,\n    \"brand\": \"Brand3\",\n    \"model\": \"Model3\",\n    \"manufacturer\": \"Manufacturer3\"\n}"
 						},
 						"url": {
-							"raw": "{{server}}:{{port}}/api/product",
+							"raw": "{{server}}:{{port}}/api/purchase/apply",
 							"host": [
 								"{{server}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"product"
+								"purchase",
+								"apply"
 							]
 						}
 					},

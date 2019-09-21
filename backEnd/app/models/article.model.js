@@ -11,6 +11,7 @@ const ArticleSchema = mongoose.Schema({
     unitCost: Number,
     provider: Provider.schema, 
     waranty: String,
+    state: String,
 
 }, {
     timestamps: true

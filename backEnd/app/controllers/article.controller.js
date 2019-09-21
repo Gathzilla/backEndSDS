@@ -30,10 +30,14 @@ exports.metadata = (req, res) => {
 
 exports.create = (req, res) => {  
     if (!req.body) {
+
+        console.log("falle en crear articulo y esto es lo que me llego" + req.body);
         let response = { "status": "error", "message": "Article content can not be empty", "error": true, "data": undefined };
         return wrapper.sendResponse({ method: "POST /api/article", response: response, httpCode: 400, res: res });
     } else {
     
+        console.log("Estoy a punto de crear un articulo y esto es lo que me llego" + req.body);
+
         const newArticle = new Article({
             product: req.body.product,
             serialNumber: req.body.serialNumber,
@@ -42,6 +46,7 @@ exports.create = (req, res) => {
             unitCost: req.body.unitCost,
             provider: req.body.provider,
             waranty: req.body.waranty,
+            state: "available"
         });
         
 
@@ -137,6 +142,7 @@ exports.update = (req, res) => {
             unitCost: req.body.unitCost,
             provider: req.body.provider,
             waranty: req.body.warranty,
+            state: "available"
         };
 
         let validation = isValid(articleToUpdate);

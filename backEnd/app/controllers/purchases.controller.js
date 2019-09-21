@@ -49,16 +49,9 @@ exports.create = (req, res) => {
             purchaseDetails: req.body.purchaseDetails
         });
 
-        
-        
-
+    
 
         let validation = isValid(newPurchase);
-
-        
-
-        
-
         
 
         if (!validation.isValid) {
@@ -160,8 +153,9 @@ exports.apply = (req, res) => {
           
         };
 
+
       
-        articleController.create;
+        articleController.create(req,res);
             
             
            
