@@ -21,7 +21,7 @@ exports.login = (req, res) => {
             } else {
                                                                                       
             
-                let token = jwt.sign({ employeeCode: user.employeeCode, name: user.name, lastName: user.lastName, 
+                let token = jwt.sign({ _id: user._id, employeeCode: user.employeeCode, name: user.name, lastName: user.lastName, 
                     nit: user.nit, accountNumber: user.accountNumber, phone: user.phone, email: user.email,
                      nick: user.nick, password: user.password, roles: user.roles}, 
                 config.secret, {
